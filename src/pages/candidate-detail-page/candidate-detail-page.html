@@ -1,0 +1,79 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="subtitle">{{ process.title}}</ion-title>
+    <ion-title>{{ candidate.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <ion-item>
+        <span class="average">
+          {{ candidate.average }}
+        </span>
+        <span item-right padding class="stars">
+          <ion-item>
+            <rr-stars [avg]="candidate.average"></rr-stars>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="contacts"> {{ votes.length }} votes</ion-icon>
+          </ion-item>
+        </span>
+      </ion-item>
+      <ion-item text-wrap>
+        {{ candidate.description }}
+      </ion-item>
+      <ion-list>
+        <ion-list-header color="dark">
+            Documents
+        </ion-list-header>
+        <ion-item *ngFor="let document of candidate.documents">
+
+          <a [href]='document'>
+            <ion-icon name="document" padding> {{ document | documentName }}</ion-icon>
+          </a>
+        </ion-item>
+      </ion-list>
+
+      <div class = "rate">
+        <ion-list-header color="dark">
+          Rate this candidate
+        </ion-list-header>
+        <ion-item class="starsContainer">
+          <rr-stars [avg]="myAverage"></rr-stars>
+        </ion-item>
+        <ion-item>
+          <ion-textarea placeholder="My rating is...">{{ myText }}</ion-textarea>
+        </ion-item>
+      </div>
+
+      <ion-list class="ratings">
+        <ion-list-header color="dark">
+            Ratings
+        </ion-list-header>
+        <ion-item *ngFor="let vote of votes">
+          <ion-item>
+            {{ vote.name }}
+            <span item-right padding class="stars">
+              <rr-stars [avg]="vote.vote"></rr-stars>
+            </span>
+          </ion-item>
+          <ion-item text-wrap>
+            {{ vote.comment }}
+          </ion-item>
+
+        </ion-item>
+
+      </ion-list>
+
+
+
+
+  </div>
+
+
+
+</ion-content>

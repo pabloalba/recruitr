@@ -25,31 +25,13 @@
     <ion-list>
       <ion-list-header color="dark">
           Candidates
-          <ion-icon name="reorder" item-right></ion-icon>
+          <ion-icon name="reorder" item-right (click)="showRadioAlert()"></ion-icon>
       </ion-list-header>
       <ion-item *ngFor="let candidate of candidates" (click)="itemTapped($event, candidate)" [class]="getCandidateClass(candidate)">
         <ion-icon name="contact" padding></ion-icon>
         {{ candidate.name }}
-        <span class="stars" item-right padding>
-          <ion-icon *ngIf="candidate.average == 0" name="star-outline" ></ion-icon>
-          <ion-icon *ngIf="candidate.average == 0.5" name="star-half"></ion-icon>
-          <ion-icon *ngIf="candidate.average >= 1" name="star"></ion-icon>
-
-          <ion-icon *ngIf="candidate.average <= 1" name="star-outline"></ion-icon>
-          <ion-icon *ngIf="candidate.average == 1.5" name="star-half"></ion-icon>
-          <ion-icon *ngIf="candidate.average >= 2" name="star"></ion-icon>
-
-          <ion-icon *ngIf="candidate.average <= 2" name="star-outline"></ion-icon>
-          <ion-icon *ngIf="candidate.average == 2.5" name="star-half"></ion-icon>
-          <ion-icon *ngIf="candidate.average >= 3" name="star"></ion-icon>
-
-          <ion-icon *ngIf="candidate.average <= 3" name="star-outline"></ion-icon>
-          <ion-icon *ngIf="candidate.average == 3.5" name="star-half"></ion-icon>
-          <ion-icon *ngIf="candidate.average >= 4" name="star"></ion-icon>
-
-          <ion-icon *ngIf="candidate.average <= 4" name="star-outline"></ion-icon>
-          <ion-icon *ngIf="candidate.average == 4.5" name="star-half"></ion-icon>
-          <ion-icon *ngIf="candidate.average >= 5" name="star"></ion-icon>
+        <span item-right padding class="stars">
+          <rr-stars [avg]="candidate.average"></rr-stars>
         </span>
 
       </ion-item>

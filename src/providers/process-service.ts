@@ -7,6 +7,7 @@ export class ProcessService {
 
   private processList: Array<any>;
   private candidates: any;
+  private votes: any;
 
   constructor(public http: Http) {
     this.processList = [
@@ -45,8 +46,14 @@ export class ProcessService {
             'name': 'Scott Summers',
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
-            'average': 3.5,
-            'voted': false
+            'average': 2.5,
+            'voted': false,
+            'documents': [
+              'http://www.pdf995.com/samples/pdfeditsample.pdf',
+              'http://www.pdf995.com/samples/widgets.txt',
+              'www.snee.com/xml/xslt/sample.doc'
+            ],
+            'description': 'Bacon ipsum dolor amet bacon sausage ground round t-bone porchetta meatball alcatra picanha jerky biltong. Rump kielbasa spare ribs sirloin landjaeger t-bone. Jowl meatball venison pork chop porchetta bresaola. Bacon kevin andouille short ribs ground round kielbasa boudin flank jowl beef pork belly.'
           },
           {
             'id': 1002,
@@ -54,7 +61,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 4.5,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1003,
@@ -62,7 +71,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 2,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1004,
@@ -70,7 +81,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 3,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1005,
@@ -78,7 +91,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 3,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1006,
@@ -86,7 +101,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 2.5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1007,
@@ -94,7 +111,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 1.5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1008,
@@ -102,7 +121,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 4,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1009,
@@ -110,7 +131,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 2.5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 1010,
@@ -118,7 +141,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           }
       ],
       2: [
@@ -128,7 +153,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 2002,
@@ -136,7 +163,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 4.5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 2003,
@@ -144,7 +173,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 3,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 2004,
@@ -152,7 +183,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 5,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 2005,
@@ -160,7 +193,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 4.5,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 2006,
@@ -168,7 +203,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 1.5,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 2007,
@@ -176,7 +213,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 4,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           }
       ],
       3: [
@@ -186,7 +225,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 3002,
@@ -194,7 +235,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 5,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 3003,
@@ -202,7 +245,9 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 3,
-            'voted': false
+            'voted': false,
+            'documents': [],
+            'description': ''
           },
           {
             'id': 3004,
@@ -210,9 +255,47 @@ export class ProcessService {
             'cv': 'http://pdf.com',
             'letter': 'http://pdf.com',
             'average': 0.5,
-            'voted': true
+            'voted': true,
+            'documents': [],
+            'description': ''
           }
       ]
+    };
+
+
+    this.votes = {
+        1001: [
+            {
+              'id': 5001,
+              'name': 'Luke',
+              'vote': 3,
+              'comment': 'Looks like a smart guy'
+            },
+            {
+              'id': 5002,
+              'name': 'Han',
+              'vote': 4.5,
+              'comment': 'Good tech, good CV'
+            },
+            {
+              'id': 5003,
+              'name': 'Chewaka',
+              'vote': 1,
+              'comment': 'aarrragghuuhw aaaaahnr uughguughhhghghghhhgh raaaaaahhgh awwgggghhh aaahnruh'
+            },
+            {
+              'id': 5004,
+              'name': 'C3PO',
+              'vote': 0.5,
+              'comment': 'How rude!'
+            },
+            {
+              'id': 5005,
+              'name': 'Leia',
+              'vote': 4,
+              'comment': 'Awesome github stike!'
+            },
+        ]
     }
   }
 
@@ -233,6 +316,14 @@ export class ProcessService {
 
   getCandidates(processId) {
     return this.candidates[processId];
+  }
+
+  getVotes(candidateId) {
+    let votes = this.votes[candidateId];
+    if (votes === undefined){
+      return []
+    }
+    return votes;
   }
 
 }

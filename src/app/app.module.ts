@@ -3,12 +3,17 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { RecruitmentProcessListPagePage } from '../pages/recruitment-process-list-page/recruitment-process-list-page';
 import { RecruitmentProcessDetailPagePage } from '../pages/recruitment-process-detail-page/recruitment-process-detail-page';
-
+import { CandidateDetailPagePage } from '../pages/candidate-detail-page/candidate-detail-page';
+import { StarsComponent } from '../components/stars/stars';
+import { DocumentName} from '../pipes/document-name';
 @NgModule({
   declarations: [
     MyApp,
     RecruitmentProcessListPagePage,
-    RecruitmentProcessDetailPagePage
+    RecruitmentProcessDetailPagePage,
+    CandidateDetailPagePage,
+    StarsComponent,
+    DocumentName
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -17,7 +22,8 @@ import { RecruitmentProcessDetailPagePage } from '../pages/recruitment-process-d
   entryComponents: [
     MyApp,
     RecruitmentProcessListPagePage,
-    RecruitmentProcessDetailPagePage
+    RecruitmentProcessDetailPagePage,
+    CandidateDetailPagePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

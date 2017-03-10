@@ -1,0 +1,33 @@
+page-candidate-detail-page {
+    .subtitle div{
+        font-size: 1.5rem;
+    }
+
+    .average {
+        font-size: 10rem;
+        text-align: center;
+    }
+
+    .stars {
+        font-size: 3rem;
+    }
+
+    .rate {
+
+        .stars {
+            margin: 0 auto;
+            font-size: 6rem;
+        }
+        .starsContainer {
+            text-align: center;
+        }
+    }
+
+    .ratings {
+        .stars {
+            font-size: 2rem;
+        }
+    }
+
+
+}
